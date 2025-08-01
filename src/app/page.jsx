@@ -24,7 +24,7 @@ export default function BirthdayRoom() {
     {
       title: "Doa Terbaik Untukmu 🤲",
       message:
-        "Semoga Allah selalu melindungi dan memberkahi hidupmu. Semoga kamu jadi anak yang sholehah, rajin belajar, dan selalu berbakti kepada orang tua.",
+        "Semoga Allah selalu melindungi dan memberkahi hidupmu. Semoga kamu jadi anak yang sholeh/sholehah, rajin belajar, dan selalu berbakti kepada orang tua.",
       decoration: "🌟🤲",
     },
     {
@@ -36,7 +36,7 @@ export default function BirthdayRoom() {
     {
       title: "Harapan untuk Masa Depan 🌈",
       message:
-        "Selamat menempuh awal perjalanan di dunia kedokteran gigi! Semoga kamu selalu semangat belajar, dikelilingi teman teman yang suportif, dan diberi kekuatan untuk terus maju meski banyak tantangan. Terus kejar impianmu jadi drg yang hebat kita semua bangga banget sama kamu!",
+        "SSelamat menempuh awal perjalanan di dunia kedokteran gigi! Semoga kamu selalu semangat belajar, dikelilingi teman-teman yang suportif, dan diberi kekuatan untuk terus maju meski banyak tantangan. Terus kejar impianmu jadi drg yang hebat, kita semua bangga banget sama kamu!",
       decoration: "🎯🌈",
     },
   ];
@@ -609,7 +609,10 @@ export default function BirthdayRoom() {
         </div>
 
         {/* Realistic Book Animation */}
-        <div className="relative" style={{ perspective: "1500px" }}>
+        <div
+          className="relative w-full flex justify-center"
+          style={{ perspective: "1500px" }}
+        >
           <div className="relative">
             {!bookOpen ? (
               /* Closed Book - More Realistic */
@@ -622,8 +625,8 @@ export default function BirthdayRoom() {
                 {/* Book Shadow */}
                 <div className="absolute inset-0 bg-black opacity-20 rounded-lg transform translate-x-2 translate-y-2 blur-lg"></div>
 
-                {/* Book Cover */}
-                <div className="relative w-80 h-60 bg-gradient-to-br from-amber-800 via-amber-700 to-amber-900 rounded-lg shadow-2xl border-4 border-amber-900">
+                {/* Book Cover - Responsive */}
+                <div className="relative w-72 sm:w-80 md:w-80 h-54 sm:h-60 md:h-60 bg-gradient-to-br from-amber-800 via-amber-700 to-amber-900 rounded-lg shadow-2xl border-4 border-amber-900">
                   {/* Book Spine */}
                   <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-amber-900 via-amber-800 to-amber-700 rounded-l-lg shadow-inner">
                     {/* Spine details */}
@@ -633,20 +636,20 @@ export default function BirthdayRoom() {
 
                   {/* Cover Content */}
                   <div className="flex items-center justify-center h-full pl-8">
-                    <div className="text-center space-y-6">
+                    <div className="text-center space-y-4 sm:space-y-6">
                       {/* Book Title */}
                       <div className="relative">
-                        <h3 className="text-3xl font-bold text-yellow-100 font-serif tracking-wide">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-yellow-100 font-serif tracking-wide">
                           Buku Ucapan
                         </h3>
-                        <div className="text-lg text-yellow-200 font-serif mt-2">
+                        <div className="text-base sm:text-lg text-yellow-200 font-serif mt-2">
                           Ulang Tahun
                         </div>
                       </div>
 
                       {/* Decorative Book Icon */}
                       <div className="relative">
-                        <BookOpen className="w-12 h-12 text-yellow-300 mx-auto animate-pulse" />
+                        <BookOpen className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300 mx-auto animate-pulse" />
                         <div className="absolute -top-1 -right-1 text-yellow-300 text-sm animate-spin">
                           ✨
                         </div>
@@ -654,9 +657,9 @@ export default function BirthdayRoom() {
 
                       {/* Ornamental Lines */}
                       <div className="flex justify-center space-x-2">
-                        <div className="w-12 h-0.5 bg-yellow-400 rounded"></div>
-                        <div className="w-6 h-0.5 bg-yellow-400 rounded"></div>
-                        <div className="w-12 h-0.5 bg-yellow-400 rounded"></div>
+                        <div className="w-10 sm:w-12 h-0.5 bg-yellow-400 rounded"></div>
+                        <div className="w-5 sm:w-6 h-0.5 bg-yellow-400 rounded"></div>
+                        <div className="w-10 sm:w-12 h-0.5 bg-yellow-400 rounded"></div>
                       </div>
 
                       <p className="text-yellow-200 text-sm font-serif italic">
@@ -698,8 +701,8 @@ export default function BirthdayRoom() {
                 {/* Book Shadow */}
                 <div className="absolute inset-0 bg-black opacity-15 rounded-lg transform translate-y-4 blur-xl"></div>
 
-                {/* Open Book Base */}
-                <div className="relative w-[700px] h-[450px] bg-gradient-to-r from-cream-100 to-cream-50 rounded-lg shadow-2xl border-4 border-amber-200 overflow-hidden">
+                {/* Open Book Base - Responsive */}
+                <div className="relative w-[90vw] max-w-[700px] h-[350px] sm:h-[400px] md:h-[450px] bg-gradient-to-r from-cream-100 to-cream-50 rounded-lg shadow-2xl border-4 border-amber-200 overflow-hidden">
                   {/* Book Binding in Center */}
                   <div className="absolute left-1/2 top-0 w-6 h-full bg-gradient-to-b from-amber-600 via-amber-700 to-amber-800 transform -translate-x-1/2 z-30 shadow-lg">
                     {/* Binding stitches */}
@@ -719,24 +722,24 @@ export default function BirthdayRoom() {
                         : "transform scale-100"
                     }`}
                   >
-                    <div className="w-full h-full p-10 bg-gradient-to-br from-cream-50 to-cream-100 rounded-l-lg relative">
+                    <div className="w-full h-full p-4 sm:p-6 md:p-10 bg-gradient-to-br from-cream-50 to-cream-100 rounded-l-lg relative">
                       {/* Page Lines */}
-                      <div className="absolute left-12 top-0 w-px h-full bg-red-200 opacity-30"></div>
-                      <div className="absolute left-0 top-16 right-0 h-px bg-blue-200 opacity-20"></div>
-                      <div className="absolute left-0 bottom-16 right-0 h-px bg-blue-200 opacity-20"></div>
+                      <div className="absolute left-8 sm:left-12 top-0 w-px h-full bg-red-200 opacity-30"></div>
+                      <div className="absolute left-0 top-12 sm:top-16 right-0 h-px bg-blue-200 opacity-20"></div>
+                      <div className="absolute left-0 bottom-12 sm:bottom-16 right-0 h-px bg-blue-200 opacity-20"></div>
 
                       <div className="h-full flex flex-col justify-between relative z-10">
                         <div>
-                          <h4 className="text-2xl font-bold text-slate-700 mb-6 font-serif border-b-2 border-slate-200 pb-2">
+                          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-700 mb-4 sm:mb-6 font-serif border-b-2 border-slate-200 pb-2">
                             {wishes[currentPage]?.title}
                           </h4>
 
-                          <div className="text-6xl mb-8 text-center">
+                          <div className="text-4xl sm:text-5xl md:text-6xl mb-6 sm:mb-8 text-center">
                             {wishes[currentPage]?.decoration}
                           </div>
 
                           {/* Decorative Quote Box */}
-                          <div className="border-l-4 border-amber-400 bg-amber-50 p-4 rounded-r-lg shadow-sm">
+                          <div className="border-l-4 border-amber-400 bg-amber-50 p-3 sm:p-4 rounded-r-lg shadow-sm">
                             <div className="text-center text-amber-700 text-sm italic font-serif">
                               "Untuk keyong jenong"
                             </div>
@@ -761,20 +764,20 @@ export default function BirthdayRoom() {
                         : "transform scale-100"
                     }`}
                   >
-                    <div className="w-full h-full p-10 bg-gradient-to-bl from-cream-50 to-cream-100 rounded-r-lg relative">
+                    <div className="w-full h-full p-4 sm:p-6 md:p-10 bg-gradient-to-bl from-cream-50 to-cream-100 rounded-r-lg relative">
                       {/* Page Lines */}
-                      <div className="absolute right-12 top-0 w-px h-full bg-red-200 opacity-30"></div>
-                      <div className="absolute left-0 top-16 right-0 h-px bg-blue-200 opacity-20"></div>
-                      <div className="absolute left-0 bottom-16 right-0 h-px bg-blue-200 opacity-20"></div>
+                      <div className="absolute right-8 sm:right-12 top-0 w-px h-full bg-red-200 opacity-30"></div>
+                      <div className="absolute left-0 top-12 sm:top-16 right-0 h-px bg-blue-200 opacity-20"></div>
+                      <div className="absolute left-0 bottom-12 sm:bottom-16 right-0 h-px bg-blue-200 opacity-20"></div>
 
                       <div className="h-full flex flex-col justify-between relative z-10">
                         <div>
-                          <p className="text-base text-slate-700 leading-relaxed font-serif mb-8 text-justify">
+                          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-serif mb-6 sm:mb-8 text-justify">
                             {wishes[currentPage]?.message}
                           </p>
 
                           {/* Decorative Hearts */}
-                          <div className="flex justify-center space-x-2 my-8">
+                          <div className="flex justify-center space-x-2 my-6 sm:my-8">
                             {[...Array(3)].map((_, i) => (
                               <Heart
                                 key={i}
@@ -785,11 +788,11 @@ export default function BirthdayRoom() {
                           </div>
 
                           {/* Signature */}
-                          <div className="mt-12 text-right border-t border-slate-200 pt-4">
+                          <div className="mt-8 sm:mt-12 text-right border-t border-slate-200 pt-4">
                             <p className="text-sm text-slate-500 italic font-serif mb-1">
                               Dengan sayang,
                             </p>
-                            <p className="text-lg text-slate-700 font-bold font-serif">
+                            <p className="text-base sm:text-lg text-slate-700 font-bold font-serif">
                               Kakak 💕
                             </p>
                           </div>
@@ -817,7 +820,7 @@ export default function BirthdayRoom() {
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-amber-50 to-transparent opacity-30 pointer-events-none"></div>
                 </div>
 
-                {/* Elegant Navigation Controls - Floating but Integrated */}
+                {/* Navigation Controls */}
                 <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
                   {/* Previous Page */}
                   {currentPage > 0 && !pageFlipping && (
